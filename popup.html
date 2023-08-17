@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beautiful Popup</title>
+    <style>
+        /* Styling for the popup container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Styling for the popup content */
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Styling for the close button */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Styling for the trigger button */
+        .trigger-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Trigger button -->
+    <button class="trigger-button" onclick="togglePopup()">Show Popup</button>
+
+    <!-- Popup container -->
+    <div class="popup-container" id="popupContainer">
+        <!-- Popup content -->
+        <div class="popup-content">
+            <span class="close-button" onclick="togglePopup()">&times;</span>
+            <h2>Welcome to our Popup!</h2>
+            <p>This is a beautiful and applicable popup example.</p>
+        </div>
+    </div>
+
+    <script>
+        function togglePopup() {
+            const popup = document.getElementById("popupContainer");
+            popup.style.display = popup.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
